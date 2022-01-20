@@ -1,14 +1,31 @@
 package Cafeteria;
 
+import utils.SizeUtils;
+
 public class Coffee implements ISnack {
     String size;
 
     public Coffee(String size) {
-        if (size != "sm" && size != "md" && size != "lg") {
+        if (!new SizeUtils().isValidSize(size)) {
             throw new IllegalArgumentException("Invalid size!");
         }
 
         this.size = size;
+    }
+
+
+    @Override
+    public void setSize(String size) {
+        if (!new SizeUtils().isValidSize(size)) {
+            throw new IllegalArgumentException("Invalid size!");
+        }
+
+        this.size = size;
+    }
+
+    @Override
+    public String getSize() {
+        return this.size;
     }
 
     @Override

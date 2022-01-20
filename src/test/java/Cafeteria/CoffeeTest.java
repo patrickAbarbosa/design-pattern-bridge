@@ -15,6 +15,7 @@ class CoffeeTest {
         }
     }
 
+    @Test
     public void shouldReturnSizeAndType() {
         Coffee coffee = new Coffee("md");
 

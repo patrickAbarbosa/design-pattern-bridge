@@ -15,12 +15,13 @@ class OrderTest {
         assertEquals("300 ml", order.parseOrderToText());
     }
 
+    @Test
     public void shouldReturnMediumSizeCheeseBun() {
         CheeseBread cheeseBread = new CheeseBread("md");
 
         Order order = new Order();
         order.addSnack(cheeseBread);
 
-        assertEquals("300 g", order.parseOrderToText());
+        assertEquals("100 g", order.parseOrderToText());
     }
 }

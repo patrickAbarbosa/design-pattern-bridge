@@ -15,6 +15,7 @@ class CheeseBreadTest {
         }
     }
 
+    @Test
     public void shouldReturnSizeAndType() {
         CheeseBread cheeseBread = new CheeseBread("md");
 
